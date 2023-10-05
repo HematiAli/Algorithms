@@ -1,6 +1,6 @@
 """
     search range
-                [6, 7, 7, 8, 8, 8, 10], 8 => [3, 5]
+                [6, 7, 7, 8, 8, 8, 10], 8=> [3, 5]
 """
 def search_range(nums, target):
     low = 0
@@ -18,6 +18,3 @@ def search_range(nums, target):
                 return [mid, j]
     
     return [None, None]
-
-
-
