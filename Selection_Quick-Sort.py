@@ -20,3 +20,19 @@ def selectionsort(arr):
     return new_arr
 
 print(selectionsort([5, 3, 6, 2, 10]))
+
+#==================================================================
+"""
+    quicksort
+        O(nlogn)
+"""
+def quicksort(arr):
+    if len(arr) < 2:
+        return arr
+    else:
+        pivot = arr[0]
+        less = [i for i in arr[1:] if i <= pivot]
+        greate = [i for i in arr[1:] if i >= pivot]
+        return quicksort(less) + [pivot] + quicksort(greate)
+    
+print(quicksort([5, 3, 6, 2, 10]))
