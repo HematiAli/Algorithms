@@ -36,3 +36,4 @@ def quicksort(arr):
         return quicksort(less) + [pivot] + quicksort(greate)
     
 print(quicksort([5, 3, 6, 2, 10]))
+dict()
