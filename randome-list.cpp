@@ -6,23 +6,31 @@ using namespace std;
 int main(){
     srand(time(0));
     int n; cin >> n;
-    int *a = new int [n];
-    int i = 0, count = 0;
-     
+    int a[n];
+    int i = 0;
     while (i < n){
         int temp = 1+rand()%n;
         bool flag = false;
-        for (int j = 0; j < i; j ++)
+
+        for (int j = 0; j < i; j++)
         {
-            if (a[j] == temp) {flag = true; break;}
+            if (temp == a[j]) flag = true;
         }
-        if (!flag) {a[i] = temp; i++;}
-        count++;
+        if (!flag) {a[i++] = temp;}
     }
-    cout << "[ ";
-    for (int i = 0; i < n; i ++)
-        cout << a[i] << "  ";
-    
-    cout << "]" << endl << "the number of creating randome number is : " << count;
+    for (int i = 0; i < n; i++)
+        cout << a[i] << " ";
+    cout << endl << "K : ";
+
+    int k; cin >> k;
+    int count = 0, sum = 0;
+    i = k;
+    while (count < n){
+        if (count % 2 == 0) sum += a[i];
+        else sum-= a[i];
+        count++;
+        i = (i+1) % n;
+    }
+    cout  << sum;
     return 0;
 }
