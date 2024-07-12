@@ -35,6 +35,19 @@ int main()
             }
         }
     }
+    /* sort for gotre asli 
+        for (int i = n-1; i > 0; i--)
+        {
+            for (int j = 0; j < i; j++)
+            {
+                if (a[j][j] > a[j+1][j+1]){
+                    int temp = a[j][j];
+                    a[j][j] = a[j+1][j+1];
+                    a[j+1][j+1] = temp;
+                }
+            }
+        }
+        */
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)
